@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DownloadManager.h"
+#import "CatPicture.h"
 
 @interface ViewController ()
 
