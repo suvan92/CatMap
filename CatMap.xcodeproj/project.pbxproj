@@ -15,6 +15,7 @@
 		1444FF831DE4CF8D003ABC54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1444FF811DE4CF8D003ABC54 /* LaunchScreen.storyboard */; };
 		1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */; };
 		1444FF921DE4D6D8003ABC54 /* CatPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF911DE4D6D8003ABC54 /* CatPicture.m */; };
+		1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		1444FF901DE4D6D8003ABC54 /* CatPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatPicture.h; sourceTree = "<group>"; };
 		1444FF911DE4D6D8003ABC54 /* CatPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatPicture.m; sourceTree = "<group>"; };
+		1444FF931DE50253003ABC54 /* CatImageCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatImageCellCollectionViewCell.h; sourceTree = "<group>"; };
+		1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatImageCellCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		1444FF721DE4CF8D003ABC54 /* CatMap */ = {
 			isa = PBXGroup;
 			children = (
+				1444FF961DE502FE003ABC54 /* Views */,
 				1444FF8C1DE4CFC1003ABC54 /* UI */,
 				1444FF8B1DE4CFBE003ABC54 /* Controllers */,
 				1444FF8A1DE4CFBB003ABC54 /* Models */,
@@ -111,6 +115,15 @@
 				1444FF811DE4CF8D003ABC54 /* LaunchScreen.storyboard */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		1444FF961DE502FE003ABC54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1444FF931DE50253003ABC54 /* CatImageCellCollectionViewCell.h */,
+				1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +199,7 @@
 			files = (
 				1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */,
 				1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */,
+				1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */,
 				1444FF751DE4CF8D003ABC54 /* main.m in Sources */,
 				1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */,
 				1444FF921DE4D6D8003ABC54 /* CatPicture.m in Sources */,

@@ -8,16 +8,21 @@
 
 #import "ViewController.h"
 #import "DownloadManager.h"
+#import "CatImageCellCollectionViewCell.h"
 #import "CatPicture.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) NSArray *arrayOfCatPictures;
 @property (nonatomic, strong) DownloadManager *downloadManager;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation ViewController
+
+static NSString * const reuseIdentifier = @"PictureCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +35,23 @@
 - (void) getCatPictures{
     [self. downloadManager getCatPictures:^(NSArray *pictures) {
         self.arrayOfCatPictures = pictures;
+        [self.collectionView reloadData];
     }];
 }
+
+#pragma mark - Collection View
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.arrayOfCatPictures.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CatImageCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    cell.catPicture = self.arrayOfCatPictures[indexPath.row];
+    
+    return cell;
+}
+
 
 @end

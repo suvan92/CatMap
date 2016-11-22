@@ -40,9 +40,10 @@
         
         for (NSDictionary *catPic in arrayOfPhotos) {
             NSString *title = catPic[@"title"];
+            NSNumber *pictureId = catPic[@"id"];
             NSString *url = catPic[@"url_m"];
             
-            CatPicture *picture = [[CatPicture alloc] initWithTitle:title andUrl:url];
+            CatPicture *picture = [[CatPicture alloc] initWithTitle:title pictureID:pictureId andUrl:url];
             [catImagesArray addObject:picture];
         }
         

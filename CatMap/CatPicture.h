@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface CatPicture : NSObject
 
 @property (nonatomic, strong) NSString *pictureTitle;
 @property (nonatomic, strong) NSNumber *pictureId;
 @property (nonatomic, strong) NSURL *imageUrl;
+@property (nonatomic, assign) CLLocationCoordinate2D *coordinate;
 
 - (instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId andUrl:(NSString *)url;
 
