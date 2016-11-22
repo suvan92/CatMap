@@ -11,13 +11,20 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSArray *arrayOfCatPictures;
+@property (nonatomic, strong) DownloadManager *downloadManager;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.downloadManager = [[DownloadManager alloc] init];
+}
+
+- (void) getCatJson{
+    self.arrayOfCatPictures = [self.downloadManager getCatImages];
 }
 
 
