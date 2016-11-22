@@ -47,11 +47,25 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CatImageCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
     cell.catPicture = self.arrayOfCatPictures[indexPath.row];
-    
     return cell;
 }
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+#pragma mark - Segue
 
 
 @end

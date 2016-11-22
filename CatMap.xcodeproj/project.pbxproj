@@ -16,6 +16,7 @@
 		1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */; };
 		1444FF921DE4D6D8003ABC54 /* CatPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF911DE4D6D8003ABC54 /* CatPicture.m */; };
 		1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */; };
+		1444FF991DE50F81003ABC54 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF981DE50F81003ABC54 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		1444FF911DE4D6D8003ABC54 /* CatPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatPicture.m; sourceTree = "<group>"; };
 		1444FF931DE50253003ABC54 /* CatImageCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatImageCellCollectionViewCell.h; sourceTree = "<group>"; };
 		1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatImageCellCollectionViewCell.m; sourceTree = "<group>"; };
+		1444FF971DE50F81003ABC54 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1444FF981DE50F81003ABC54 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				1444FF791DE4CF8D003ABC54 /* ViewController.h */,
 				1444FF7A1DE4CF8D003ABC54 /* ViewController.m */,
+				1444FF971DE50F81003ABC54 /* DetailViewController.h */,
+				1444FF981DE50F81003ABC54 /* DetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				1444FF751DE4CF8D003ABC54 /* main.m in Sources */,
 				1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */,
 				1444FF921DE4D6D8003ABC54 /* CatPicture.m in Sources */,
+				1444FF991DE50F81003ABC54 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1113.75" y="122.53521126760563"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="ncH-5U-KgS">
             <objects>
-                <viewController id="fd9-gx-Vdc" sceneMemberID="viewController">
+                <viewController id="fd9-gx-Vdc" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="36J-0m-KJv"/>
                         <viewControllerLayoutGuide type="bottom" id="gq4-05-9QC"/>
