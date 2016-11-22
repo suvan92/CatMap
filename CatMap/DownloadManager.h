@@ -10,6 +10,6 @@
 
 @interface DownloadManager : NSObject
 
-- (NSArray *)getCatImages;
+- (void)getCatPictures:(void (^)(NSArray *pictures))completion;
 
 @end

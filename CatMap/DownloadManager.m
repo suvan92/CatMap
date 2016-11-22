@@ -11,7 +11,7 @@
 
 @implementation DownloadManager
 
-- (NSArray *)getCatImages {
+- (void)getCatPictures:(void (^)(NSArray *pictures))completion {
     NSMutableArray *catImagesArray = [NSMutableArray new];
     
     NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a7e8eeb660518f4cb05325751027181d&tags=cat&has_geo=1&extras=url_m&format=json&nojsoncallback=1"];
@@ -45,9 +45,12 @@
             CatPicture *picture = [[CatPicture alloc] initWithTitle:title andUrl:url];
             [catImagesArray addObject:picture];
         }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            completion(catImagesArray);
+        }];
     }];
     [dataTask resume];
-    return catImagesArray;
 }
 
 @end
