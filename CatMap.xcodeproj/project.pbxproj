@@ -58,14 +58,9 @@
 		1444FF721DE4CF8D003ABC54 /* CatMap */ = {
 			isa = PBXGroup;
 			children = (
-				1444FF761DE4CF8D003ABC54 /* AppDelegate.h */,
-				1444FF771DE4CF8D003ABC54 /* AppDelegate.m */,
-				1444FF791DE4CF8D003ABC54 /* ViewController.h */,
-				1444FF7A1DE4CF8D003ABC54 /* ViewController.m */,
-				1444FF7C1DE4CF8D003ABC54 /* Main.storyboard */,
-				1444FF7F1DE4CF8D003ABC54 /* Assets.xcassets */,
-				1444FF811DE4CF8D003ABC54 /* LaunchScreen.storyboard */,
-				1444FF841DE4CF8D003ABC54 /* Info.plist */,
+				1444FF8C1DE4CFC1003ABC54 /* UI */,
+				1444FF8B1DE4CFBE003ABC54 /* Controllers */,
+				1444FF8A1DE4CFBB003ABC54 /* Models */,
 				1444FF731DE4CF8D003ABC54 /* Supporting Files */,
 			);
 			path = CatMap;
@@ -74,9 +69,38 @@
 		1444FF731DE4CF8D003ABC54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1444FF7F1DE4CF8D003ABC54 /* Assets.xcassets */,
+				1444FF841DE4CF8D003ABC54 /* Info.plist */,
 				1444FF741DE4CF8D003ABC54 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1444FF8A1DE4CFBB003ABC54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1444FF761DE4CF8D003ABC54 /* AppDelegate.h */,
+				1444FF771DE4CF8D003ABC54 /* AppDelegate.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1444FF8B1DE4CFBE003ABC54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1444FF791DE4CF8D003ABC54 /* ViewController.h */,
+				1444FF7A1DE4CF8D003ABC54 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1444FF8C1DE4CFC1003ABC54 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1444FF7C1DE4CF8D003ABC54 /* Main.storyboard */,
+				1444FF811DE4CF8D003ABC54 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
