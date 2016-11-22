@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface CatPicture : NSObject
+@interface CatPicture : NSObject <MKAnnotation>
 
 @property (nonatomic, strong) NSString *pictureTitle;
 @property (nonatomic, strong) NSNumber *pictureId;
 @property (nonatomic, strong) NSURL *imageUrl;
-@property (nonatomic, assign) CLLocationCoordinate2D *coordinate;
+@property (nonatomic) CLLocationCoordinate2D *pictureCoordinate;
 
 - (instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId andUrl:(NSString *)url;
 
