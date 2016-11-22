@@ -22,17 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.downloadManager = [[DownloadManager alloc] init];
-    [self getCatJson];
+    [self getCatPictures];
 }
 
 #pragma mark - General Methods
 
-- (void) getCatJson{
+- (void) getCatPictures{
     [self. downloadManager getCatPictures:^(NSArray *pictures) {
         self.arrayOfCatPictures = pictures;
     }];
 }
-
-
 
 @end

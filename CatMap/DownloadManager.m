@@ -14,7 +14,7 @@
 - (void)getCatPictures:(void (^)(NSArray *pictures))completion {
     NSMutableArray *catImagesArray = [NSMutableArray new];
     
-    NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a7e8eeb660518f4cb05325751027181d&tags=cat&has_geo=1&extras=url_m&format=json&nojsoncallback=1"];
+    NSURL *url = [self constructURL];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -51,6 +51,25 @@
         }];
     }];
     [dataTask resume];
+}
+
+- (NSURL *)constructURL {
+    NSDictionary *queryDict = @{@"method" : @"flickr.photos.search", @"api_key" : @"a7e8eeb660518f4cb05325751027181d", @"tags" : @"cat", @"has_geo" : @"1", @"extras" : @"url_m", @"format" : @"json", @"nojsoncallback" : @"1"};
+    
+    NSMutableArray *queries = [NSMutableArray new];
+    for (NSString *key in queryDict) {
+        [queries addObject:[NSURLQueryItem queryItemWithName:key value:queryDict[key]]];
+    }
+    
+    NSURLComponents *components = [[NSURLComponents alloc] init];
+    components.scheme = @"https";
+    components.host = @"api.flickr.com";
+    components.path = @"/services/rest/";
+    components.queryItems = queries;
+    
+    NSLog(@"%@", components.URL);
+    
+    return components.URL;
 }
 
 @end

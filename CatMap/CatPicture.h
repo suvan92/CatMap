@@ -11,8 +11,9 @@
 @interface CatPicture : NSObject
 
 @property (nonatomic, strong) NSString *pictureTitle;
+@property (nonatomic, strong) NSNumber *pictureId;
 @property (nonatomic, strong) NSURL *imageUrl;
 
-- (instancetype)initWithTitle:(NSString *)title andUrl:(NSString *)url;
+- (instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId andUrl:(NSString *)url;
 
 @end
