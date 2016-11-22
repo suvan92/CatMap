@@ -13,6 +13,7 @@
 		1444FF7E1DE4CF8D003ABC54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1444FF7C1DE4CF8D003ABC54 /* Main.storyboard */; };
 		1444FF801DE4CF8D003ABC54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1444FF7F1DE4CF8D003ABC54 /* Assets.xcassets */; };
 		1444FF831DE4CF8D003ABC54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1444FF811DE4CF8D003ABC54 /* LaunchScreen.storyboard */; };
+		1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		1444FF7F1DE4CF8D003ABC54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1444FF821DE4CF8D003ABC54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1444FF841DE4CF8D003ABC54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1444FF8D1DE4D3EA003ABC54 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 			children = (
 				1444FF761DE4CF8D003ABC54 /* AppDelegate.h */,
 				1444FF771DE4CF8D003ABC54 /* AppDelegate.m */,
+				1444FF8D1DE4D3EA003ABC54 /* DownloadManager.h */,
+				1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */,
 				1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */,
 				1444FF751DE4CF8D003ABC54 /* main.m in Sources */,
+				1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
