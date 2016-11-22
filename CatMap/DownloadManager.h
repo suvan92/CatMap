@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface DownloadManager : NSObject
 
 - (void)getCatPictures:(void (^)(NSArray *pictures))completion;
+- (void)getImage:(NSURL *)url completion:(void (^)(UIImage *image))completion;
 
 @end
