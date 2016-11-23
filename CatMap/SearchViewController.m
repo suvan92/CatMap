@@ -27,7 +27,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self searchFunction];
-    return NO;
+    return YES;
 }
 
 -(void)searchFunction {
@@ -37,6 +37,7 @@
     NSDictionary *searchDict = @{@"searchValue" : searchString};
     NSNotification *notification = [[NSNotification alloc] initWithName:@"newSearchValue" object:nil userInfo:searchDict];
     [nCentre postNotification:notification];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

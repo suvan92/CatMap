@@ -11,11 +11,18 @@
 
 @implementation DownloadManager
 
--(void)awakeFromNib {
-    [super awakeFromNib];
-    self.tagValue = @"cat";
-    
-    NSNotificationCenter *nCentre = [NSNotificationCenter defaultCenter];
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        NSNotificationCenter *nCentre = [NSNotificationCenter defaultCenter];
+        [nCentre addObserver:self selector:@selector(changeTagValue:) name:@"newSearchValue" object:nil];
+    }
+    return self;
+}
+
+- (void)changeTagValue:(NSNotification *)notification {
+    NSString *tagString = [notification.userInfo objectForKey:@"searchValue"];
+    self.tagValue = tagString;
 }
 
 - (void)getCatPictures:(void (^)(NSArray *pictures))completion {
@@ -62,6 +69,10 @@
 }
 
 - (NSURL *)constructURL {
+    if (!self.tagValue) {
+        self.tagValue = @"cat";
+    }
+    
     NSDictionary *queryDict = @{@"method" : @"flickr.photos.search", @"api_key" : @"a7e8eeb660518f4cb05325751027181d", @"tags" : self.tagValue, @"has_geo" : @"1", @"extras" : @"url_m", @"format" : @"json", @"nojsoncallback" : @"1"};
     
     NSMutableArray *queries = [NSMutableArray new];

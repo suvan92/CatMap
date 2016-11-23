@@ -32,6 +32,9 @@ static NSString * const searchSegueIdentifier = @"displaySearchVC";
     self.downloadManager = [[DownloadManager alloc] init];
     [self getCatPictures];
     [self addSearchButton];
+    
+    NSNotificationCenter *nCentre = [NSNotificationCenter defaultCenter];
+    [nCentre addObserver:self selector:@selector(newSearch:) name:@"newSearchValue" object:nil];
 }
 
 #pragma mark - General Methods
@@ -41,6 +44,10 @@ static NSString * const searchSegueIdentifier = @"displaySearchVC";
         self.arrayOfCatPictures = pictures;
         [self.collectionView reloadData];
     }];
+}
+
+-(void)newSearch:(NSNotification *)notification {
+    [self getCatPictures];
 }
 
 - (void) addSearchButton {
@@ -75,9 +82,11 @@ static NSString * const searchSegueIdentifier = @"displaySearchVC";
 #pragma mark - Segue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    CatPicture *catPicture = [self.arrayOfCatPictures objectAtIndex:self.selectedIndexPath.row];
-    DetailViewController *detailVC = segue.destinationViewController;
-    detailVC.picture = catPicture;
+    if ([segue.identifier isEqualToString:detailSegueIdentifier]) {
+        CatPicture *catPicture = [self.arrayOfCatPictures objectAtIndex:self.selectedIndexPath.row];
+        DetailViewController *detailVC = segue.destinationViewController;
+        detailVC.picture = catPicture;
+    }
 }
 
 @end
