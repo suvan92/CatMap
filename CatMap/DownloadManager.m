@@ -11,6 +11,13 @@
 
 @implementation DownloadManager
 
+-(void)awakeFromNib {
+    [super awakeFromNib];
+    self.tagValue = @"cat";
+    
+    NSNotificationCenter *nCentre = [NSNotificationCenter defaultCenter];
+}
+
 - (void)getCatPictures:(void (^)(NSArray *pictures))completion {
     NSMutableArray *catImagesArray = [NSMutableArray new];
     
@@ -55,7 +62,7 @@
 }
 
 - (NSURL *)constructURL {
-    NSDictionary *queryDict = @{@"method" : @"flickr.photos.search", @"api_key" : @"a7e8eeb660518f4cb05325751027181d", @"tags" : @"cat", @"has_geo" : @"1", @"extras" : @"url_m", @"format" : @"json", @"nojsoncallback" : @"1"};
+    NSDictionary *queryDict = @{@"method" : @"flickr.photos.search", @"api_key" : @"a7e8eeb660518f4cb05325751027181d", @"tags" : self.tagValue, @"has_geo" : @"1", @"extras" : @"url_m", @"format" : @"json", @"nojsoncallback" : @"1"};
     
     NSMutableArray *queries = [NSMutableArray new];
     for (NSString *key in queryDict) {

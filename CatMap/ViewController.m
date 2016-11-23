@@ -25,11 +25,13 @@
 
 static NSString * const reuseIdentifier = @"PictureCell";
 static NSString * const detailSegueIdentifier = @"showDetailVC";
+static NSString * const searchSegueIdentifier = @"displaySearchVC";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.downloadManager = [[DownloadManager alloc] init];
     [self getCatPictures];
+    [self addSearchButton];
 }
 
 #pragma mark - General Methods
@@ -39,6 +41,18 @@ static NSString * const detailSegueIdentifier = @"showDetailVC";
         self.arrayOfCatPictures = pictures;
         [self.collectionView reloadData];
     }];
+}
+
+- (void) addSearchButton {
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithTitle:@"Search"
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(goToSearchVC)];
+    self.navigationItem.rightBarButtonItem = searchButton;
+}
+
+- (void)goToSearchVC {
+    [self performSegueWithIdentifier:searchSegueIdentifier sender:self];
 }
 
 #pragma mark - Collection View

@@ -11,6 +11,8 @@
 
 @interface DownloadManager : NSObject
 
+@property (nonatomic, strong) NSString *tagValue;
+
 - (void)getCatPictures:(void (^)(NSArray *pictures))completion;
 - (void)getImage:(NSURL *)url completion:(void (^)(UIImage *image))completion;
 

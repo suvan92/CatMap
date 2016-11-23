@@ -19,6 +19,7 @@
 		1444FF991DE50F81003ABC54 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF981DE50F81003ABC54 /* DetailViewController.m */; };
 		1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF9B1DE51973003ABC54 /* LocationManager.m */; };
 		1444FFA21DE52BBA003ABC54 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1444FFA11DE52BBA003ABC54 /* MapKit.framework */; };
+		1444FFA51DE544EF003ABC54 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FFA41DE544EF003ABC54 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		1444FF9A1DE51973003ABC54 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		1444FF9B1DE51973003ABC54 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		1444FFA11DE52BBA003ABC54 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1444FFA31DE544EF003ABC54 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		1444FFA41DE544EF003ABC54 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				1444FF7A1DE4CF8D003ABC54 /* ViewController.m */,
 				1444FF971DE50F81003ABC54 /* DetailViewController.h */,
 				1444FF981DE50F81003ABC54 /* DetailViewController.m */,
+				1444FFA31DE544EF003ABC54 /* SearchViewController.h */,
+				1444FFA41DE544EF003ABC54 /* SearchViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */,
 				1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */,
 				1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */,
+				1444FFA51DE544EF003ABC54 /* SearchViewController.m in Sources */,
 				1444FF751DE4CF8D003ABC54 /* main.m in Sources */,
 				1444FF8F1DE4D3EA003ABC54 /* DownloadManager.m in Sources */,
 				1444FF921DE4D6D8003ABC54 /* CatPicture.m in Sources */,
