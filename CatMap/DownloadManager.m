@@ -68,8 +68,6 @@
     components.path = @"/services/rest/";
     components.queryItems = queries;
     
-    NSLog(@"%@", components.URL);
-    
     return components.URL;
 }
 

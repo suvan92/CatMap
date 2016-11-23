@@ -25,8 +25,6 @@
     [super viewDidLoad];
     self.title = self.picture.pictureTitle;
     [self retrieveCoordinates];
-    
-    
 }
 
 -(void)retrieveCoordinates {
