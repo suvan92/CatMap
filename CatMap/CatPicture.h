@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *pictureTitle;
 @property (nonatomic, strong) NSNumber *pictureId;
 @property (nonatomic, strong) NSURL *imageUrl;
-@property (nonatomic) CLLocationCoordinate2D *pictureCoordinate;
+@property (nonatomic) CLLocationCoordinate2D coordinates;
 
 - (instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId andUrl:(NSString *)url;
 

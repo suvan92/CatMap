@@ -10,8 +10,8 @@
 
 @implementation LocationManager
 
--(void)getPictureLocationData:(NSNumber *)pictureId completion:(void (^)(CoordinatePasser *coord))completion {
-    NSString *picIDstring = [pictureId stringValue];
+-(void)getPictureLocationData:(CatPicture *)picture {
+    NSString *picIDstring = [picture.pictureId stringValue];
     NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.geo.getLocation&api_key=a7e8eeb660518f4cb05325751027181d&photo_id=%@&format=json&nojsoncallback=1", picIDstring];
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -31,15 +31,7 @@
         NSDictionary *photoDict = jsonDict[@"photo"];
         NSDictionary *locationDict = photoDict[@"location"];
         
-        CoordinatePasser *coords = [[CoordinatePasser alloc] init];
-        coords.latCoord = [locationDict[@"latitude"] doubleValue];
-        coords.lonCoord = [locationDict[@"longitude"] doubleValue];
-        
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            completion(coords);
-        }];
-        
-        
+        picture.coordinate = CLLocationCoordinate2DMake([locationDict[@"latitude"] doubleValue], [locationDict[@"longitude"] doubleValue]);
     }];
     [dataTask resume];
 }
