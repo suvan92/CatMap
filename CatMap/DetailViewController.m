@@ -9,6 +9,7 @@
 #import <MapKit/MapKit.h>
 #import "DetailViewController.h"
 #import "LocationManager.h"
+#import "CoordinatePasser.h"
 #import "CatPicture.h"
 
 
@@ -24,13 +25,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.picture.pictureTitle;
-    self.locationManager = [[LocationManager alloc] init];
-    [self.locationManager getPictureLocationData:self.picture.pictureId completion:^(CLLocationCoordinate2D coord) {
-        
-        
-    }];
+    [self retrieveCoordinates];
+    
+    
 }
 
+-(void)retrieveCoordinates {
+    if (!self.picture.pictureCoordinate) {
+        self.locationManager = [[LocationManager alloc] init];
+        [self.locationManager getPictureLocationData:self.picture.pictureId completion:^(CoordinatePasser *coords) {
+            
+        }];
+    }
+}
 
 
 @end

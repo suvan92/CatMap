@@ -18,6 +18,7 @@
 		1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */; };
 		1444FF991DE50F81003ABC54 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF981DE50F81003ABC54 /* DetailViewController.m */; };
 		1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF9B1DE51973003ABC54 /* LocationManager.m */; };
+		1444FF9F1DE523D0003ABC54 /* CoordinatePasser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF9E1DE523D0003ABC54 /* CoordinatePasser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		1444FF981DE50F81003ABC54 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1444FF9A1DE51973003ABC54 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		1444FF9B1DE51973003ABC54 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		1444FF9D1DE523D0003ABC54 /* CoordinatePasser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinatePasser.h; sourceTree = "<group>"; };
+		1444FF9E1DE523D0003ABC54 /* CoordinatePasser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinatePasser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */,
 				1444FF9A1DE51973003ABC54 /* LocationManager.h */,
 				1444FF9B1DE51973003ABC54 /* LocationManager.m */,
+				1444FF9D1DE523D0003ABC54 /* CoordinatePasser.h */,
+				1444FF9E1DE523D0003ABC54 /* CoordinatePasser.m */,
 				1444FF901DE4D6D8003ABC54 /* CatPicture.h */,
 				1444FF911DE4D6D8003ABC54 /* CatPicture.m */,
 			);
@@ -208,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */,
+				1444FF9F1DE523D0003ABC54 /* CoordinatePasser.m in Sources */,
 				1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */,
 				1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */,
 				1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */,
