@@ -17,6 +17,7 @@
 		1444FF921DE4D6D8003ABC54 /* CatPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF911DE4D6D8003ABC54 /* CatPicture.m */; };
 		1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */; };
 		1444FF991DE50F81003ABC54 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF981DE50F81003ABC54 /* DetailViewController.m */; };
+		1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF9B1DE51973003ABC54 /* LocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		1444FF941DE50253003ABC54 /* CatImageCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatImageCellCollectionViewCell.m; sourceTree = "<group>"; };
 		1444FF971DE50F81003ABC54 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1444FF981DE50F81003ABC54 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1444FF9A1DE51973003ABC54 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		1444FF9B1DE51973003ABC54 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				1444FF771DE4CF8D003ABC54 /* AppDelegate.m */,
 				1444FF8D1DE4D3EA003ABC54 /* DownloadManager.h */,
 				1444FF8E1DE4D3EA003ABC54 /* DownloadManager.m */,
+				1444FF9A1DE51973003ABC54 /* LocationManager.h */,
+				1444FF9B1DE51973003ABC54 /* LocationManager.m */,
 				1444FF901DE4D6D8003ABC54 /* CatPicture.h */,
 				1444FF911DE4D6D8003ABC54 /* CatPicture.m */,
 			);
@@ -202,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */,
 				1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */,
 				1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */,
 				1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */,

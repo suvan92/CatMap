@@ -100,8 +100,24 @@
                     <view key="view" contentMode="scaleToFill" id="F3C-wn-2fn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="th3-Be-bh7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="XcF-Tt-zSS"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="th3-Be-bh7" secondAttribute="trailing" id="6zs-Eu-Cmc"/>
+                            <constraint firstItem="th3-Be-bh7" firstAttribute="leading" secondItem="F3C-wn-2fn" secondAttribute="leading" id="QTP-rj-pQf"/>
+                            <constraint firstItem="th3-Be-bh7" firstAttribute="top" secondItem="36J-0m-KJv" secondAttribute="bottom" id="Sh9-X6-NH5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="th3-Be-bh7" id="O4U-gi-cgN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFv-8q-iY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

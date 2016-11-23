@@ -6,10 +6,15 @@
 //  Copyright © 2016 suvanr. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 #import "DetailViewController.h"
+#import "LocationManager.h"
 #import "CatPicture.h"
 
-@interface DetailViewController ()
+
+@interface DetailViewController () <MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -17,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = self.picture.pictureTitle;
 }
 
 
