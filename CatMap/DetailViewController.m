@@ -15,6 +15,7 @@
 @interface DetailViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) LocationManager *locationManager;
 
 @end
 
@@ -23,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.picture.pictureTitle;
+    self.locationManager = [[LocationManager alloc] init];
+    [self.locationManager getPictureLocationData:self.picture.pictureId completion:^(CLLocationCoordinate2D coord) {
+        
+        
+    }];
 }
 
 

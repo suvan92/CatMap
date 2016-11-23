@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CatPicture.h"
 
 @interface LocationManager : NSObject
+
+-(void)getPictureLocationData:(NSNumber *)pictureId completion:(void (^)(CLLocationCoordinate2D coord))completion;
 
 @end
