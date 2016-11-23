@@ -12,6 +12,6 @@
 
 @interface DetailViewController : UIViewController
 
-@property (nonatomic, strong) __block CatPicture *picture;
+@property (nonatomic, strong) CatPicture *picture;
 
 @end
