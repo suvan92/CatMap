@@ -11,6 +11,6 @@
 
 @interface LocationManager : NSObject
 
--(void)getPictureLocationData:(CatPicture *)picture;
+-(void)getPictureLocationData:(CatPicture *)picture completion:(void (^)(CLLocationCoordinate2D))completion;
 
 @end

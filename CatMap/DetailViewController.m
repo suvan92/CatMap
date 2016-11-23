@@ -25,12 +25,24 @@
     [super viewDidLoad];
     self.title = self.picture.pictureTitle;
     [self retrieveCoordinates];
+    
+    
 }
 
 -(void)retrieveCoordinates {
     self.locationManager = [[LocationManager alloc] init];
-    [self.locationManager getPictureLocationData:self.picture];
+    [self.locationManager getPictureLocationData:self.picture completion:^(CLLocationCoordinate2D coordinates){
+        self.picture.coordinate = coordinates;
+        [self drawMap];
+    }];
 }
+
+- (void)drawMap {
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.5f, 0.5f);
+    self.mapView.region = MKCoordinateRegionMake(self.picture.coordinate, span);
+    [self.mapView addAnnotation:self.picture];
+}
+
 
 
 @end
