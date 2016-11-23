@@ -11,6 +11,7 @@
 #import "CatImageCellCollectionViewCell.h"
 #import "CatPicture.h"
 #import "DetailViewController.h"
+#import "ShowAllViewController.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -26,12 +27,14 @@
 static NSString * const reuseIdentifier = @"PictureCell";
 static NSString * const detailSegueIdentifier = @"showDetailVC";
 static NSString * const searchSegueIdentifier = @"displaySearchVC";
+static NSString * const showAllSegueIdentifier = @"showAllVC";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.downloadManager = [[DownloadManager alloc] init];
     [self getCatPictures];
     [self addSearchButton];
+    [self addShowAllButton];
     
     NSNotificationCenter *nCentre = [NSNotificationCenter defaultCenter];
     [nCentre addObserver:self selector:@selector(newSearch:) name:@"newSearchValue" object:nil];
@@ -58,8 +61,21 @@ static NSString * const searchSegueIdentifier = @"displaySearchVC";
     self.navigationItem.rightBarButtonItem = searchButton;
 }
 
+
+- (void)addShowAllButton {
+    UIBarButtonItem *showAllButton = [[UIBarButtonItem alloc] initWithTitle:@"Show All"
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(goToShowAll)];
+    self.navigationItem.leftBarButtonItem = showAllButton;
+}
+
 - (void)goToSearchVC {
     [self performSegueWithIdentifier:searchSegueIdentifier sender:self];
+}
+
+- (void)goToShowAll {
+    [self performSegueWithIdentifier:showAllSegueIdentifier sender:self];
 }
 
 #pragma mark - Collection View
@@ -86,6 +102,9 @@ static NSString * const searchSegueIdentifier = @"displaySearchVC";
         CatPicture *catPicture = [self.arrayOfCatPictures objectAtIndex:self.selectedIndexPath.row];
         DetailViewController *detailVC = segue.destinationViewController;
         detailVC.picture = catPicture;
+    } else if ([segue.identifier isEqualToString:showAllSegueIdentifier]) {
+        ShowAllViewController *showAllVC = segue.destinationViewController;
+        showAllVC.listOfPictures = self.arrayOfCatPictures;
     }
 }
 

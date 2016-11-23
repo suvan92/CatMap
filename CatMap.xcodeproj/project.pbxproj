@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141209871DE5FB490062AD5E /* ShowAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141209861DE5FB490062AD5E /* ShowAllViewController.m */; };
 		1444FF751DE4CF8D003ABC54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF741DE4CF8D003ABC54 /* main.m */; };
 		1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF771DE4CF8D003ABC54 /* AppDelegate.m */; };
 		1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF7A1DE4CF8D003ABC54 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141209851DE5FB490062AD5E /* ShowAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAllViewController.h; sourceTree = "<group>"; };
+		141209861DE5FB490062AD5E /* ShowAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAllViewController.m; sourceTree = "<group>"; };
 		1444FF701DE4CF8D003ABC54 /* CatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1444FF741DE4CF8D003ABC54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1444FF761DE4CF8D003ABC54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				1444FF981DE50F81003ABC54 /* DetailViewController.m */,
 				1444FFA31DE544EF003ABC54 /* SearchViewController.h */,
 				1444FFA41DE544EF003ABC54 /* SearchViewController.m */,
+				141209851DE5FB490062AD5E /* ShowAllViewController.h */,
+				141209861DE5FB490062AD5E /* ShowAllViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */,
+				141209871DE5FB490062AD5E /* ShowAllViewController.m in Sources */,
 				1444FF7B1DE4CF8D003ABC54 /* ViewController.m in Sources */,
 				1444FF781DE4CF8D003ABC54 /* AppDelegate.m in Sources */,
 				1444FF951DE50253003ABC54 /* CatImageCellCollectionViewCell.m in Sources */,
@@ -387,6 +393,7 @@
 				1444FF891DE4CF8D003ABC54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

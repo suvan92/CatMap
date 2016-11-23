@@ -10,6 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Show All View Controller-->
+        <scene sceneID="3Hd-1c-wdg">
+            <objects>
+                <viewController id="BG9-UG-LlW" customClass="ShowAllViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="seQ-RX-DGT"/>
+                        <viewControllerLayoutGuide type="bottom" id="pro-2O-Ewq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="24U-BH-5Ch">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eIN-6W-eQD">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eIN-6W-eQD" firstAttribute="top" secondItem="seQ-RX-DGT" secondAttribute="bottom" id="h14-Xw-5jE"/>
+                            <constraint firstAttribute="trailing" secondItem="eIN-6W-eQD" secondAttribute="trailing" id="lyw-GV-Bcl"/>
+                            <constraint firstItem="eIN-6W-eQD" firstAttribute="leading" secondItem="24U-BH-5Ch" secondAttribute="leading" id="utA-lc-d4s"/>
+                            <constraint firstItem="pro-2O-Ewq" firstAttribute="top" secondItem="eIN-6W-eQD" secondAttribute="bottom" id="vya-9K-nCd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="eIN-6W-eQD" id="G7D-dS-OKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNJ-Q5-iJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863.75" y="-595.77464788732391"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -85,6 +117,7 @@
                         <outlet property="collectionView" destination="Cnz-pr-cWI" id="cWb-hm-7kY"/>
                         <segue destination="fd9-gx-Vdc" kind="show" identifier="showDetailVC" id="Lks-ag-2BB"/>
                         <segue destination="te4-gG-OEi" kind="presentation" identifier="displaySearchVC" id="c3E-vI-Ey0"/>
+                        <segue destination="BG9-UG-LlW" kind="show" identifier="showAllVC" id="E7U-ue-uhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -134,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dxn-Oo-JNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100.625" y="929.57746478873241"/>
+            <point key="canvasLocation" x="1864" y="918"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="ncH-5U-KgS">
@@ -168,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFv-8q-iY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.75" y="122.53521126760563"/>
+            <point key="canvasLocation" x="1864" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yan-su-iTi">
