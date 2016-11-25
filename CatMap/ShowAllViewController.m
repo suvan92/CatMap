@@ -41,7 +41,3 @@
 
 
 @end
-
-
-
-//-(void)getPictureLocationData:(CatPicture *)picture completion:(void (^)(CLLocationCoordinate2D))completion;
