@@ -74,25 +74,34 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7G4-a4-n3h">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="130"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itd-Qb-3q9">
-                                                    <rect key="frame" x="37.5" y="129" width="76" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Itd-Qb-3q9">
+                                                    <rect key="frame" x="0.0" y="129" width="150" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="nYR-N3-o4h"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lm3-gZ-MMa">
+                                                    <rect key="frame" x="65" y="55" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="7G4-a4-n3h" firstAttribute="top" secondItem="wlZ-FH-XFG" secondAttribute="top" id="63A-5p-sSy"/>
                                             <constraint firstItem="Itd-Qb-3q9" firstAttribute="top" secondItem="wlZ-FH-XFG" secondAttribute="top" constant="129" id="8av-8t-keV"/>
+                                            <constraint firstItem="lm3-gZ-MMa" firstAttribute="centerY" secondItem="7G4-a4-n3h" secondAttribute="centerY" id="9Zd-a4-5hY"/>
                                             <constraint firstItem="Itd-Qb-3q9" firstAttribute="centerX" secondItem="wlZ-FH-XFG" secondAttribute="centerX" id="GOv-HU-Jjk"/>
                                             <constraint firstAttribute="trailing" secondItem="7G4-a4-n3h" secondAttribute="trailing" id="Lcf-vk-h76"/>
                                             <constraint firstItem="7G4-a4-n3h" firstAttribute="centerX" secondItem="wlZ-FH-XFG" secondAttribute="centerX" id="Xm3-ZM-PfE"/>
+                                            <constraint firstItem="lm3-gZ-MMa" firstAttribute="centerX" secondItem="7G4-a4-n3h" secondAttribute="centerX" id="ZBr-Xz-ryK"/>
                                             <constraint firstItem="7G4-a4-n3h" firstAttribute="leading" secondItem="wlZ-FH-XFG" secondAttribute="leading" id="lqF-pt-OTS"/>
                                             <constraint firstAttribute="bottom" secondItem="7G4-a4-n3h" secondAttribute="bottom" constant="20" id="qyy-m5-tHE"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="150"/>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="lm3-gZ-MMa" id="8C6-8h-rym"/>
                                             <outlet property="catImageTitle" destination="Itd-Qb-3q9" id="sw6-Jc-bKw"/>
                                             <outlet property="catImageView" destination="7G4-a4-n3h" id="Dmr-u2-cq7"/>
                                         </connections>

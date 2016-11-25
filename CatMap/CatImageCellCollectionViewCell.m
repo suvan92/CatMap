@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *catImageView;
 @property (weak, nonatomic) IBOutlet UILabel *catImageTitle;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 
 @end
@@ -39,9 +40,11 @@
 
 -(void)downloadImage {
     self.catImageView.image = nil;
+    self.activityIndicator.hidden = NO;
     NSURL *tempPicURL = self.catPicture.imageUrl;
     [self.downloadManager getImage:self.catPicture.imageUrl completion:^(UIImage *image) {
         if ([self.catPicture.imageUrl isEqual:tempPicURL]) {
+            self.activityIndicator.hidden = YES;
             self.catImageView.image = image;
             self.catImageView.contentMode = UIViewContentModeScaleAspectFit;
         }
