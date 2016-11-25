@@ -56,8 +56,9 @@
             NSString *title = catPic[@"title"];
             NSNumber *pictureId = catPic[@"id"];
             NSString *url = catPic[@"url_m"];
+            NSString *sqUrl = catPic[@"url_sq"];
             
-            CatPicture *picture = [[CatPicture alloc] initWithTitle:title pictureID:pictureId andUrl:url];
+            CatPicture *picture = [[CatPicture alloc] initWithTitle:title pictureID:pictureId Url:url andSQUrl:sqUrl];
             [catImagesArray addObject:picture];
         }
         
@@ -73,7 +74,7 @@
         self.tagValue = @"cat";
     }
     
-    NSDictionary *queryDict = @{@"method" : @"flickr.photos.search", @"api_key" : @"a7e8eeb660518f4cb05325751027181d", @"tags" : self.tagValue, @"has_geo" : @"1", @"extras" : @"url_m", @"format" : @"json", @"nojsoncallback" : @"1"};
+    NSDictionary *queryDict = @{@"method" : @"flickr.photos.search", @"api_key" : @"a7e8eeb660518f4cb05325751027181d", @"tags" : self.tagValue, @"has_geo" : @"1", @"extras" : @"url_m, url_sq", @"format" : @"json", @"nojsoncallback" : @"1"};
     
     NSMutableArray *queries = [NSMutableArray new];
     for (NSString *key in queryDict) {

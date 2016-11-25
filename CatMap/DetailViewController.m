@@ -8,6 +8,7 @@
 
 #import <MapKit/MapKit.h>
 #import "DetailViewController.h"
+#import "DownloadManager.h"
 #import "LocationManager.h"
 #import "CatPicture.h"
 
@@ -16,15 +17,18 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) LocationManager *locationManager;
-
+@property (nonatomic, strong) DownloadManager *downloadManager;
 @end
 
 @implementation DetailViewController
+
+static NSString * const kAnnotationViewReuseIdentifier = @"annotationViewRI";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.picture.pictureTitle;
     [self retrieveCoordinates];
+    self.downloadManager = [[DownloadManager alloc] init];
 }
 
 -(void)retrieveCoordinates {
@@ -41,6 +45,17 @@
     [self.mapView addAnnotation:self.picture];
 }
 
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKAnnotationView *annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:kAnnotationViewReuseIdentifier];
+    if (annoView == nil) {
+        annoView = [[MKAnnotationView alloc] initWithAnnotation:self.picture reuseIdentifier:kAnnotationViewReuseIdentifier];
+        annoView.enabled = YES;
+        [self.downloadManager getImage:self.picture.sqUrl completion:^(UIImage *image) {
+            annoView.image = image;
+        }];
+    }
+    return annoView;
+}
 
 
 @end

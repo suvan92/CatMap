@@ -8,14 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import <Realm.h>
 
 @interface CatPicture : NSObject <MKAnnotation>
 
-@property (nonatomic, strong) NSString *pictureTitle;
-@property (nonatomic, strong) NSNumber *pictureId;
-@property (nonatomic, strong) NSURL *imageUrl;
+@property (nonatomic) NSString *pictureTitle;
+@property (nonatomic) NSNumber *pictureId;
+@property (nonatomic) NSURL *imageUrl;
+@property (nonatomic) NSURL *sqUrl;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
-- (instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId andUrl:(NSString *)url;
+
+- (instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId Url:(NSString *)url andSQUrl:(NSString *)sqUrl;
 
 @end

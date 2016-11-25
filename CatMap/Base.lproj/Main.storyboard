@@ -186,6 +186,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="XcF-Tt-zSS"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fd9-gx-Vdc" id="oEF-GU-YQX"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

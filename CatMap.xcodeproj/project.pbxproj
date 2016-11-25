@@ -21,6 +21,7 @@
 		1444FF9C1DE51973003ABC54 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FF9B1DE51973003ABC54 /* LocationManager.m */; };
 		1444FFA21DE52BBA003ABC54 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1444FFA11DE52BBA003ABC54 /* MapKit.framework */; };
 		1444FFA51DE544EF003ABC54 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444FFA41DE544EF003ABC54 /* SearchViewController.m */; };
+		6572F461B468B97A79236B03 /* libPods-CatMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 250FDEC4600CE01856D4A56D /* libPods-CatMap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,9 @@
 		1444FFA11DE52BBA003ABC54 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1444FFA31DE544EF003ABC54 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		1444FFA41DE544EF003ABC54 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		250FDEC4600CE01856D4A56D /* libPods-CatMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68FD732E80FAA8B01A09969 /* Pods-CatMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatMap/Pods-CatMap.release.xcconfig"; sourceTree = "<group>"; };
+		FC622C83C9CB637E80858ABD /* Pods-CatMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatMap/Pods-CatMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1444FFA21DE52BBA003ABC54 /* MapKit.framework in Frameworks */,
+				6572F461B468B97A79236B03 /* libPods-CatMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,7 @@
 				1444FF721DE4CF8D003ABC54 /* CatMap */,
 				1444FF711DE4CF8D003ABC54 /* Products */,
 				1444FFA01DE52BBA003ABC54 /* Frameworks */,
+				DB64D746E369D8B8601AE5F4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,8 +160,18 @@
 			isa = PBXGroup;
 			children = (
 				1444FFA11DE52BBA003ABC54 /* MapKit.framework */,
+				250FDEC4600CE01856D4A56D /* libPods-CatMap.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB64D746E369D8B8601AE5F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC622C83C9CB637E80858ABD /* Pods-CatMap.debug.xcconfig */,
+				A68FD732E80FAA8B01A09969 /* Pods-CatMap.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1444FF871DE4CF8D003ABC54 /* Build configuration list for PBXNativeTarget "CatMap" */;
 			buildPhases = (
+				29E1087D4F853DE0F18B24C8 /* [CP] Check Pods Manifest.lock */,
 				1444FF6C1DE4CF8D003ABC54 /* Sources */,
 				1444FF6D1DE4CF8D003ABC54 /* Frameworks */,
 				1444FF6E1DE4CF8D003ABC54 /* Resources */,
+				35B610DAD04E70F899064ACA /* [CP] Embed Pods Frameworks */,
+				550974154F7A947FC1F785CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +242,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29E1087D4F853DE0F18B24C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35B610DAD04E70F899064ACA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatMap/Pods-CatMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		550974154F7A947FC1F785CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatMap/Pods-CatMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1444FF6C1DE4CF8D003ABC54 /* Sources */ = {
@@ -354,6 +421,7 @@
 		};
 		1444FF881DE4CF8D003ABC54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC622C83C9CB637E80858ABD /* Pods-CatMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CatMap/Info.plist;
@@ -365,6 +433,7 @@
 		};
 		1444FF891DE4CF8D003ABC54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68FD732E80FAA8B01A09969 /* Pods-CatMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CatMap/Info.plist;

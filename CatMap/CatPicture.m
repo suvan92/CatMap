@@ -10,12 +10,13 @@
 
 @implementation CatPicture
 
--(instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId andUrl:(NSString *)url {
+-(instancetype)initWithTitle:(NSString *)title pictureID:(NSNumber *)pictureId Url:(NSString *)url andSQUrl:(NSString *)sqUrl {
     self = [super init];
     if (self) {
         _pictureTitle = title;
         _pictureId = pictureId;
         _imageUrl = [NSURL URLWithString:url];
+        _sqUrl = [NSURL URLWithString:sqUrl];
     }
     return self;
 }
